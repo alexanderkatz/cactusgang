@@ -1,0 +1,139 @@
+/*-----------------------------------------------------------
+
+    Theme Name: Portafolio-Child
+    Author: Alex Katz
+    Author URI: http://alexkatz.me
+    Designed & Developed by http://www.alexkatz.me
+	Theme URI: http://www.wpexplorer.com/themes/
+	License: GNU General Public License version 2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Template: wpex-portafolio
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../wpex-portafolio/style.css');
+/* =Theme customization starts here*/
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+.table-cell {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+
+/* Main Navigation
+================================================== */
+#navigation .dropdown-menu a { font-family: biko; font-size: 15px; color: black; font-weight: bold; text-decoration: none; letter-spacing: 1px; }
+#navigation .dropdown-menu > li > a:hover {color: #3E4949}
+#navigation .dropdown-menu > .current-menu-item > a { color: #fff }
+/* Only for items two and greater*/
+#navigation .dropdown-menu > li { height: 40px; margin-left: 0px; }
+#navigation .dropdown-menu > li:nth-child(n+2) { height: 40px; margin-left: 25px; }
+
+
+/*drop-down styles*/
+#navigation .dropdown-menu ul { background: #181818; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3); box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); margin-left: -20px; padding: 10px 0; }
+transform: none; font-size: 13px; font-weight: 400; }
+#navigation .dropdown-menu ul li > a:hover { color: #fff }
+
+/* Masthead
+================================================== */
+#masthead-wrap{
+	background: #32AD49;
+	margin-bottom: 0px;
+}
+#masthead{
+	border:none;
+	padding: 15px 0;
+	/* width is 980px */
+}
+/*Center Logo*/
+#logo{
+	float: none;
+	margin: auto;
+	width: 200px;
+}
+#navigation{
+	position: relative;
+	margin-top: 20px;
+}
+
+/*Center Content On Pages other than Home*/
+#content{width: 980px; margin:auto;}
+/* Home Page
+================================================== */
+#wrap, #main-content, #primary, #home-content, #home-wrap, #home-slider-wrap, #home-features{width: 100%;}
+#home-wrap{
+	background: #3E4949;
+	height: 100%;
+}
+
+
+/*Full Width Wrappers*/
+#home-features{	background: #3E4949;}
+#home-slider-wrap{
+		background: #FAF6DA;
+		margin: 0px;
+}
+#home-slider{padding: 40px 0px 40px 0px;}
+/*980px wrappers*/
+#home-slider, #features-wrap, #home-text{
+	width: 980px;
+	margin:auto;
+}
+#home-text{
+	font-family: biko;
+	font-size: 18px;
+	color: white;
+	padding: 50px 0px 25px 0px;
+}
+.features img{
+	display: block;
+	margin: auto;
+}
+#footer-wrap{margin:0px;}
+
+/* Single Pages
+================================================== */
+#page-header{ 
+	height: 90px;
+	background: url('./images/page-title-banner.png') no-repeat center;
+}
+.page-header-title{
+	text-align: center;
+	position: relative;
+	top: 30px;
+	font-family: biko;
+}
+
+/* All Responsive
+================================================== */
+@media only screen and (max-width: 959px) { 
+	/*logo*/
+	#logo { display: block; float: none; margin: 0 auto 30px; text-align: center; }
+	#logo img { display: block; margin: 0 auto; }
+	/*navigation top menu*/
+	#navigation { position: inherit; width: 100%; margin-top: 0; margin: 0; top: auto; right: auto; }
+	#navigation ul { display: none }
+	#navigation select { display: block; margin: 0 auto; }
+	#copyright, #footer-aside { float: none; text-align: center; width: 100%; margin-bottom: 5px; }
+}
+/* Tablet (Landscape)
+================================================== */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+	#home-slider .flex-direction-nav { display: none !important }
+}
+/* Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) { 
+	#home-slider, #features-wrap, #home-text { width: 700px }
+}
+
+/* Mobile (Landscape)
+================================================== */
+@media only screen and (min-width: 0px) and (max-width: 767px) { 
+	#home-slider, #features-wrap, #home-text { width: 90% }
+}
